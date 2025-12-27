@@ -1,0 +1,20 @@
+{
+  "analysis": {
+    "total_monthly_cost": 5875.7,
+    "budget": 3000,
+    "budget_variance": 2875.7,
+    "service_costs": {
+      "Compute": 2000.0,
+      "Database": 1800.0,
+      "Storage": 370.0,
+      "Networking": 1500.0,
+      "Monitoring": 205.7
+    },
+    "high_cost_services": {
+      "Compute": 2000.0,
+      "Database": 1800.0,
+      "Networking": 1500.0
+    },
+    "is_over_budget": true
+  }
+}
