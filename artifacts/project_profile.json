@@ -1,0 +1,12 @@
+{
+  "name": "Ecommerce Market Analysis Tool",
+  "budget_inr_per_month": 3000,
+  "description": "An application to track top selling products every month.",
+  "tech_stack": {
+    "frontend": "React",
+    "backend": "Node.js",
+    "database": "MongoDB",
+    "hosting": "AWS"
+  },
+  "non_functional_requirements": []
+}

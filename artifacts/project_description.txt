@@ -1,0 +1,9 @@
+I want to build an ecommerce market analysis tool.
+
+The application will track top selling products every month.
+Frontend will be built using React.
+Backend will use Node.js with MongoDB as database.
+Nginx will be used as reverse proxy.
+Hosting will be on AWS.
+
+My monthly cloud budget is 3000 INR.

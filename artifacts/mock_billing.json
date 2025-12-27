@@ -1,0 +1,102 @@
+[
+  {
+    "month": "2023-10",
+    "service": "Compute",
+    "resource_id": "i-1234567890abcdef0",
+    "region": "us-east-1",
+    "usage_quantity": 730,
+    "unit": "hours",
+    "cost_inr": 1200,
+    "desc": "t2.micro instance for backend processing"
+  },
+  {
+    "month": "2023-10",
+    "service": "Compute",
+    "resource_id": "i-0987654321fedcba0",
+    "region": "ap-south-1",
+    "usage_quantity": 365,
+    "unit": "hours",
+    "cost_inr": 800,
+    "desc": "t2.micro instance for database replication"
+  },
+  {
+    "month": "2023-10",
+    "service": "Database",
+    "resource_id": "db-12345678",
+    "region": "us-east-1",
+    "usage_quantity": 744,
+    "unit": "hours",
+    "cost_inr": 1200,
+    "desc": "MongoDB Atlas M10 instance running for the month"
+  },
+  {
+    "month": "2023-10",
+    "service": "Database",
+    "resource_id": "db-87654321",
+    "region": "eu-west-1",
+    "usage_quantity": 372,
+    "unit": "hours",
+    "cost_inr": 600,
+    "desc": "MongoDB Atlas M5 instance for backup operations"
+  },
+  {
+    "month": "2023-11",
+    "service": "Storage",
+    "resource_id": "s3-bucket-12345",
+    "region": "us-east-1",
+    "usage_quantity": 150,
+    "unit": "GB",
+    "cost_inr": 250,
+    "desc": "Standard storage for product images and metadata"
+  },
+  {
+    "month": "2023-11",
+    "service": "Storage",
+    "resource_id": "s3-bucket-67890",
+    "region": "eu-west-1",
+    "usage_quantity": 50,
+    "unit": "GB",
+    "cost_inr": 120,
+    "desc": "Backup storage for transaction logs"
+  },
+  {
+    "month": "2023-11",
+    "service": "Networking",
+    "resource_id": "nat-gateway-12345",
+    "region": "us-east-1",
+    "usage_quantity": 744,
+    "unit": "hours",
+    "cost_inr": 1200,
+    "desc": "NAT Gateway usage for outbound traffic"
+  },
+  {
+    "month": "2023-11",
+    "service": "Networking",
+    "resource_id": "vpc-flow-logs-67890",
+    "region": "us-east-1",
+    "usage_quantity": 100,
+    "unit": "GB",
+    "cost_inr": 300,
+    "desc": "VPC Flow Logs storage and analysis"
+  },
+  {
+    "month": "2023-11",
+    "service": "Monitoring",
+    "resource_id": "mon-789012",
+    "region": "us-east-1",
+    "usage_quantity": 744,
+    "unit": "hours",
+    "cost_inr": 120.5,
+    "desc": "Basic monitoring for application health checks"
+  },
+  {
+    "month": "2023-11",
+    "service": "Monitoring",
+    "resource_id": "mon-345678",
+    "region": "eu-west-1",
+    "usage_quantity": 320,
+    "unit": "hours",
+    "cost_inr": 85.2,
+    "desc": "Advanced monitoring with custom metrics"
+  }
+]
