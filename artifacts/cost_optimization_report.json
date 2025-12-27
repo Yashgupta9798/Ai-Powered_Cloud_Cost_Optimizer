@@ -16,5 +16,194 @@
       "Networking": 1500.0
     },
     "is_over_budget": true
+  },
+  "recommendations": [
+    {
+      "title": "Right-size EC2 Instances",
+      "service": "EC2",
+      "current_cost": 2000,
+      "potential_savings": 500,
+      "recommendation_type": "Right-Sizing",
+      "description": "Analyze CPU and memory utilization metrics to downsize over-provisioned EC2 instances.",
+      "implementation_effort": "medium",
+      "risk_level": "low",
+      "steps": [
+        "Use AWS Trusted Advisor or Cost Explorer to identify underutilized instances",
+        "Evaluate performance metrics for the past 30 days",
+        "Migrate to smaller instance types if utilization is consistently low"
+      ],
+      "cloud_providers": [
+        "AWS"
+      ]
+    },
+    {
+      "title": "Implement Auto Scaling for EC2",
+      "service": "EC2 Auto Scaling",
+      "current_cost": 2000,
+      "potential_savings": 400,
+      "recommendation_type": "Auto Scaling",
+      "description": "Configure auto scaling policies to dynamically adjust compute resources based on demand.",
+      "implementation_effort": "medium",
+      "risk_level": "medium",
+      "steps": [
+        "Define scaling policies based on CPU utilization thresholds",
+        "Set up CloudWatch alarms to trigger scaling actions",
+        "Test scaling behavior during peak and off-peak hours"
+      ],
+      "cloud_providers": [
+        "AWS"
+      ]
+    },
+    {
+      "title": "Optimize MongoDB Atlas Tier",
+      "service": "Database",
+      "current_cost": 1800,
+      "potential_savings": 500,
+      "recommendation_type": "Right-Sizing",
+      "description": "Downgrade the MongoDB Atlas cluster tier to a smaller instance size that matches the actual workload requirements.",
+      "implementation_effort": "medium",
+      "risk_level": "low",
+      "steps": [
+        "Analyze current database usage metrics",
+        "Identify underutilized resources",
+        "Downgrade to a smaller cluster tier",
+        "Monitor performance post-downgrade"
+      ],
+      "cloud_providers": [
+        "AWS"
+      ]
+    },
+    {
+      "title": "Enable MongoDB Atlas Serverless",
+      "service": "Database",
+      "current_cost": 1800,
+      "potential_savings": 700,
+      "recommendation_type": "Serverless Migration",
+      "description": "Migrate to MongoDB Atlas Serverless to pay only for the resources consumed, reducing costs for variable workloads.",
+      "implementation_effort": "high",
+      "risk_level": "medium",
+      "steps": [
+        "Assess compatibility with serverless architecture",
+        "Plan migration strategy",
+        "Test serverless instance in staging",
+        "Migrate production workloads"
+      ],
+      "cloud_providers": [
+        "AWS"
+      ]
+    },
+    {
+      "title": "Optimize S3 Storage Class",
+      "service": "Amazon S3",
+      "current_cost": 370,
+      "potential_savings": 120,
+      "recommendation_type": "Storage Optimization",
+      "description": "Migrate infrequently accessed data to S3 Intelligent-Tiering or S3 Standard-IA to reduce costs.",
+      "implementation_effort": "medium",
+      "risk_level": "low",
+      "steps": [
+        "Identify data access patterns using S3 Storage Lens",
+        "Migrate cold data to S3 Intelligent-Tiering or S3 Standard-IA",
+        "Set up lifecycle policies for automatic transitions"
+      ],
+      "cloud_providers": [
+        "AWS"
+      ]
+    },
+    {
+      "title": "Enable S3 Intelligent-Tiering",
+      "service": "Amazon S3",
+      "current_cost": 370,
+      "potential_savings": 80,
+      "recommendation_type": "Storage Optimization",
+      "description": "Enable S3 Intelligent-Tiering for automatic cost savings by moving data to the most cost-effective access tier.",
+      "implementation_effort": "low",
+      "risk_level": "low",
+      "steps": [
+        "Enable S3 Intelligent-Tiering on existing buckets",
+        "Monitor cost savings through AWS Cost Explorer"
+      ],
+      "cloud_providers": [
+        "AWS"
+      ]
+    },
+    {
+      "title": "Optimize Data Transfer Costs with AWS Data Transfer Pricing",
+      "service": "Networking",
+      "current_cost": 1500.0,
+      "potential_savings": 400.0,
+      "recommendation_type": "Data Transfer Optimization",
+      "description": "Reduce data transfer costs by optimizing data flow between regions and using AWS data transfer pricing tiers.",
+      "implementation_effort": "medium",
+      "risk_level": "low",
+      "steps": [
+        "Analyze data transfer patterns and identify high-cost transfers",
+        "Use AWS data transfer pricing tiers to minimize costs",
+        "Consider using AWS PrivateLink for inter-service communication"
+      ],
+      "cloud_providers": [
+        "AWS"
+      ]
+    },
+    {
+      "title": "Enable AWS VPC Flow Logs for Cost Monitoring",
+      "service": "Networking",
+      "current_cost": 1500.0,
+      "potential_savings": 200.0,
+      "recommendation_type": "Monitoring and Optimization",
+      "description": "Enable VPC Flow Logs to monitor and analyze network traffic, identifying unnecessary or high-cost data transfers.",
+      "implementation_effort": "low",
+      "risk_level": "low",
+      "steps": [
+        "Enable VPC Flow Logs in AWS",
+        "Analyze logs to identify cost-saving opportunities",
+        "Adjust network configurations based on findings"
+      ],
+      "cloud_providers": [
+        "AWS"
+      ]
+    },
+    {
+      "title": "Optimize CloudWatch Logs Retention",
+      "service": "AWS CloudWatch",
+      "current_cost": 205.7,
+      "potential_savings": 50,
+      "recommendation_type": "log_optimization",
+      "description": "Reduce CloudWatch log retention period for non-critical logs and archive older logs to S3.",
+      "implementation_effort": "low",
+      "risk_level": "low",
+      "steps": [
+        "Identify logs that can be archived or deleted",
+        "Set up lifecycle policies for log retention",
+        "Configure S3 for long-term log storage if needed"
+      ],
+      "cloud_providers": [
+        "AWS"
+      ]
+    },
+    {
+      "title": "Use AWS CloudWatch Metrics with Custom Granularity",
+      "service": "AWS CloudWatch",
+      "current_cost": 205.7,
+      "potential_savings": 30,
+      "recommendation_type": "monitoring_optimization",
+      "description": "Adjust CloudWatch metrics granularity to 5-minute intervals for non-critical metrics instead of 1-minute.",
+      "implementation_effort": "medium",
+      "risk_level": "low",
+      "steps": [
+        "Review current metrics and their granularity",
+        "Adjust non-critical metrics to 5-minute intervals",
+        "Monitor impact on monitoring effectiveness"
+      ],
+      "cloud_providers": [
+        "AWS"
+      ]
+    }
+  ],
+  "summary": {
+    "total_potential_savings": 2980,
+    "savings_percentage": 50.72,
+    "recommendations_count": 10,
+    "high_impact_recommendations": 4
   }
 }
