@@ -1,53 +1,55 @@
 {
   "analysis": {
-    "total_monthly_cost": 8400.0,
+    "total_monthly_cost": 4760.0,
     "budget": 3000,
-    "budget_variance": 5400.0,
+    "budget_variance": 1760.0,
     "service_costs": {
-      "Compute": 4200.0,
+      "Compute": 800.0,
       "Database": 850.0,
       "Storage": 1500.0,
       "Networking": 1000.0,
-      "Monitoring": 850.0
+      "Monitoring": 610.0
     },
     "high_cost_services": {
-      "Compute": 4200.0
+      "Storage": 1500.0,
+      "Networking": 1000.0
     },
     "is_over_budget": true
   },
   "recommendations": [
     {
-      "title": "Optimize EC2 Instance Types",
+      "title": "Optimize Amazon Elastic Compute Cloud (EC2) instances",
       "service": "Compute",
-      "current_cost": 4200.0,
-      "potential_savings": 1500.0,
-      "recommendation_type": "Resizing",
-      "description": "Consider resizing your EC2 instances to save costs by choosing more cost-effective instance types.",
-      "implementation_effort": "medium",
+      "current_cost": 800.0,
+      "potential_savings": 200.0,
+      "recommendation_type": "rightsizing",
+      "description": "Reduce the instance type or number of instances based on usage patterns.",
+      "implementation_effort": "low",
       "risk_level": "low",
       "steps": [
-        "Identify the current instance type and compare it with other instance types that offer similar performance but at a lower cost.",
-        "Resize the instances to the more cost-effective instance types.",
-        "Monitor the performance of the resized instances."
+        "Analyze EC2 usage patterns.",
+        "Identify underutilized instances.",
+        "Downsize or terminate underutilized instances.",
+        "Consider using Spot Instances for cost savings."
       ],
       "cloud_providers": [
         "AWS"
       ]
     },
     {
-      "title": "Implement Spot Instances",
-      "service": "Compute",
-      "current_cost": 4200.0,
-      "potential_savings": 2100.0,
-      "recommendation_type": "Spot Instances",
-      "description": "Consider using Spot Instances to save up to 80% on your Compute costs.",
-      "implementation_effort": "high",
+      "title": "Implement Amazon Simple Storage Service (S3) lifecycle policies",
+      "service": "Storage",
+      "current_cost": 1500.0,
+      "potential_savings": 500.0,
+      "recommendation_type": "optimization",
+      "description": "Set up lifecycle policies to automatically move older data to cheaper storage classes.",
+      "implementation_effort": "medium",
       "risk_level": "medium",
       "steps": [
-        "Create a Spot Instance launch configuration.",
-        "Configure the maximum price you are willing to pay for the Spot Instances.",
-        "Launch the Spot Instances and monitor their performance.",
-        "Update your application to handle potential interruptions caused by Spot Instance terminations."
+        "Create a lifecycle policy for your S3 bucket.",
+        "Define rules for transitioning objects to cheaper storage classes.",
+        "Set up a default storage class for new objects.",
+        "Test the lifecycle policy before enabling it."
       ],
       "cloud_providers": [
         "AWS"
@@ -57,14 +59,14 @@
       "title": "Optimize MongoDB Instance Type",
       "service": "Database",
       "current_cost": 850.0,
-      "potential_savings": 425.0,
+      "potential_savings": 200.0,
       "recommendation_type": "rightsizing",
-      "description": "Downsize the MongoDB instance type to a smaller one that better fits the workload.",
+      "description": "Reduce the instance type of MongoDB to a smaller, less expensive one while ensuring it still meets the application's performance requirements.",
       "implementation_effort": "low",
       "risk_level": "low",
       "steps": [
-        "Analyze current MongoDB workload and usage patterns.",
-        "Choose a smaller instance type that meets the requirements.",
+        "Analyze current MongoDB instance type and usage.",
+        "Choose a smaller instance type that meets the application's performance requirements.",
         "Modify the MongoDB instance type in the AWS Management Console."
       ],
       "cloud_providers": [
@@ -72,18 +74,18 @@
       ]
     },
     {
-      "title": "Implement MongoDB Automated Backups",
+      "title": "Implement Data Archiving",
       "service": "Database",
-      "current_cost": 0.0,
-      "potential_savings": 425.0,
-      "recommendation_type": "cost_optimization",
-      "description": "Enable automated backups for MongoDB to avoid unnecessary manual snapshots and reduce storage costs.",
+      "current_cost": 1500.0,
+      "potential_savings": 500.0,
+      "recommendation_type": "optimization",
+      "description": "Archive older data to a cheaper storage class to reduce the cost of storing large amounts of data that are rarely accessed.",
       "implementation_effort": "medium",
-      "risk_level": "low",
+      "risk_level": "medium",
       "steps": [
-        "Navigate to the MongoDB cluster in the AWS Management Console.",
-        "Configure automated backups with a retention period that meets your recovery point objective.",
-        "Monitor the backup process to ensure it runs successfully."
+        "Identify data that can be archived.",
+        "Configure MongoDB to use a cheaper storage class for archived data.",
+        "Implement a data archiving and retrieval strategy."
       ],
       "cloud_providers": [
         "AWS"
@@ -95,28 +97,29 @@
       "current_cost": 1500.0,
       "potential_savings": 525.0,
       "recommendation_type": "cost_reduction",
-      "description": "Reduce S3 storage costs by implementing lifecycle policies and archiving infrequently accessed data.",
+      "description": "Reduce the cost of S3 storage by implementing lifecycle policies and archiving infrequently accessed data.",
       "implementation_effort": "medium",
       "risk_level": "low",
       "steps": [
-        "Create S3 lifecycle policies to automatically move older data to cheaper storage classes.",
-        "Archive infrequently accessed data to Amazon Glacier for long-term storage."
+        "Create S3 lifecycle policies to move older data to cheaper storage classes.",
+        "Enable versioning on your S3 buckets to prevent accidental deletion of data."
       ],
       "cloud_providers": [
         "AWS"
       ]
     },
     {
-      "title": "Use S3 Intelligent-Tiering",
-      "service": "Storage",
-      "current_cost": 1500.0,
-      "potential_savings": 375.0,
+      "title": "Optimize Data Transfer Costs",
+      "service": "Networking",
+      "current_cost": 1000.0,
+      "potential_savings": 300.0,
       "recommendation_type": "cost_reduction",
-      "description": "Implement S3 Intelligent-Tiering to automatically optimize storage costs based on access patterns.",
+      "description": "Reduce the cost of data transfer by using Amazon CloudFront or transferring data during off-peak hours.",
       "implementation_effort": "low",
       "risk_level": "low",
       "steps": [
-        "Enable S3 Intelligent-Tiering on your S3 buckets."
+        "Use Amazon CloudFront to cache static content and reduce data transfer costs.",
+        "Transfer data during off-peak hours to take advantage of lower data transfer rates."
       ],
       "cloud_providers": [
         "AWS"
@@ -126,68 +129,71 @@
       "title": "Optimize Network Data Transfer Costs",
       "service": "Networking",
       "current_cost": 1000.0,
-      "potential_savings": 500.0,
+      "potential_savings": 300.0,
       "recommendation_type": "cost_reduction",
-      "description": "Reduce data transfer costs by optimizing network traffic and using AWS Data Transfer Optimization.",
+      "description": "Reduce data transfer costs by implementing data compression and optimizing network traffic.",
       "implementation_effort": "medium",
-      "risk_level": "low",
-      "steps": [
-        "Enable AWS Data Transfer Optimization for your application.",
-        "Optimize network traffic by compressing data before sending and decompressing it on the receiving end."
-      ],
-      "cloud_providers": [
-        "AWS"
-      ]
-    },
-    {
-      "title": "Use Reserved Instances for EC2 Instances",
-      "service": "Compute",
-      "current_cost": 4200.0,
-      "potential_savings": 1080.0,
-      "recommendation_type": "cost_reduction",
-      "description": "Purchase Reserved Instances for your EC2 instances to get a significant discount on compute costs.",
-      "implementation_effort": "high",
       "risk_level": "medium",
       "steps": [
-        "Identify your EC2 instance usage patterns.",
-        "Purchase Reserved Instances that match your usage patterns.",
-        "Monitor the usage and adjust Reserved Instances as needed."
+        "Enable data compression for outgoing and incoming data.",
+        "Optimize network traffic by reducing unnecessary requests and responses.",
+        "Consider using AWS Data Transfer Acceleration for faster and more cost-effective data transfers."
       ],
       "cloud_providers": [
         "AWS"
       ]
     },
     {
-      "title": "Optimize CloudWatch Alarms",
-      "service": "Monitoring",
-      "current_cost": 850.0,
-      "potential_savings": 500.0,
-      "recommendation_type": "Cost Reduction",
-      "description": "Reduce the number of unnecessary CloudWatch alarms.",
+      "title": "Use Reserved Instances for Elastic Load Balancer",
+      "service": "Networking",
+      "current_cost": 1000.0,
+      "potential_savings": 200.0,
+      "recommendation_type": "cost_optimization",
+      "description": "Purchase Reserved Instances for Elastic Load Balancer to save up to 60% on usage costs.",
       "implementation_effort": "low",
       "risk_level": "low",
       "steps": [
-        "Review and delete unused CloudWatch alarms.",
-        "Consolidate similar alarms.",
-        "Adjust alarm thresholds to reduce false positives."
+        "Navigate to the EC2 Reserved Instances page in the AWS Management Console.",
+        "Select the appropriate instance type and usage duration for your Elastic Load Balancer.",
+        "Purchase the Reserved Instance and apply it to your Elastic Load Balancer."
       ],
       "cloud_providers": [
         "AWS"
       ]
     },
     {
-      "title": "Use Grouping and Filtering for CloudTrail Logs",
+      "title": "Optimize CloudWatch Logs Retention",
       "service": "Monitoring",
-      "current_cost": 850.0,
-      "potential_savings": 300.0,
+      "current_cost": 610.0,
+      "potential_savings": 305.0,
       "recommendation_type": "Cost Reduction",
-      "description": "Optimize CloudTrail log storage costs by grouping and filtering logs.",
-      "implementation_effort": "medium",
+      "description": "Reduce the retention period of CloudWatch logs to lower storage costs.",
+      "implementation_effort": "low",
       "risk_level": "low",
       "steps": [
-        "Configure log file validation and filtering to only store necessary logs.",
-        "Use log file grouping to reduce the number of log files stored.",
-        "Consider using S3 Intelligent-Tiering for more cost-effective storage."
+        "Navigate to the CloudWatch console.",
+        "Select Log groups.",
+        "Modify the retention period to a shorter duration.",
+        "Save the changes."
+      ],
+      "cloud_providers": [
+        "AWS"
+      ]
+    },
+    {
+      "title": "Consolidate Monitoring Services",
+      "service": "Monitoring",
+      "current_cost": 610.0,
+      "potential_savings": 200.0,
+      "recommendation_type": "Cost Reduction",
+      "description": "Consolidate multiple monitoring services into a single service to reduce costs.",
+      "implementation_effort": "medium",
+      "risk_level": "medium",
+      "steps": [
+        "Identify redundant monitoring services.",
+        "Evaluate the impact of consolidation on application performance.",
+        "Consolidate the services.",
+        "Monitor the application performance post-consolidation."
       ],
       "cloud_providers": [
         "AWS"
@@ -195,8 +201,8 @@
     }
   ],
   "summary": {
-    "total_potential_savings": 8125.0,
-    "savings_percentage": 95.0,
+    "total_potential_savings": 3480.0,
+    "savings_percentage": 73.64,
     "recommendations_count": 10,
     "high_impact_recommendations": 2
   }

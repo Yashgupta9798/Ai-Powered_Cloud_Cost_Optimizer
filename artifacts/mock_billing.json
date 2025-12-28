@@ -6,28 +6,28 @@
     "region": "us-west-2",
     "usage_quantity": 100,
     "unit": "Hours",
-    "cost_inr": 1200,
-    "desc": "On-demand Linux/UNIX EC2 instance usage for Ecommerce Market Analysis Tool"
+    "cost_inr": 500,
+    "desc": "Ecommerce Market Analysis Tool - EC2 instance usage"
   },
   {
     "month": "January",
     "service": "Compute",
-    "resource_id": "r5a-0abcd1234efgh5678",
+    "resource_id": "r5d9876543210abc",
     "region": "us-east-1",
     "usage_quantity": 50,
-    "unit": "GB-Month",
-    "cost_inr": 600,
-    "desc": "Amazon Elastic Cache for Redis usage for Ecommerce Market Analysis Tool"
+    "unit": "GB",
+    "cost_inr": 200,
+    "desc": "Ecommerce Market Analysis Tool - RDS instance usage"
   },
   {
     "month": "January",
     "service": "Compute",
-    "resource_id": "db-0abcd1234efgh5678",
+    "resource_id": "e3f0123456789abc",
     "region": "us-west-2",
-    "usage_quantity": 200,
-    "unit": "GB-Month",
-    "cost_inr": 2400,
-    "desc": "Amazon RDS PostgreSQL DB instance usage for Ecommerce Market Analysis Tool"
+    "usage_quantity": 20,
+    "unit": "GB",
+    "cost_inr": 100,
+    "desc": "Ecommerce Market Analysis Tool - S3 bucket usage"
   },
   {
     "month": "January",
@@ -124,29 +124,29 @@
     "service": "Monitoring",
     "resource_id": "CloudWatch-Logs-Ecommerce-Market-Analysis-Tool",
     "region": "us-west-2",
-    "usage_quantity": 1000,
-    "unit": "GB",
-    "cost_inr": 500,
-    "desc": "CloudWatch Logs usage for Ecommerce Market Analysis Tool"
+    "usage_quantity": 10000,
+    "unit": "Logs",
+    "cost_inr": 200,
+    "desc": "CloudWatch Logs for Ecommerce Market Analysis Tool"
   },
   {
     "month": "January",
     "service": "Monitoring",
     "resource_id": "CloudWatch-Alarms-Ecommerce-Market-Analysis-Tool",
     "region": "us-west-2",
-    "usage_quantity": 200,
-    "unit": "alarms",
-    "cost_inr": 100,
-    "desc": "CloudWatch Alarms usage for Ecommerce Market Analysis Tool"
+    "usage_quantity": 50,
+    "unit": "Alarms",
+    "cost_inr": 10,
+    "desc": "CloudWatch Alarms for Ecommerce Market Analysis Tool"
   },
   {
     "month": "January",
     "service": "Monitoring",
     "resource_id": "CloudWatch-Metrics-Ecommerce-Market-Analysis-Tool",
     "region": "us-west-2",
-    "usage_quantity": 500,
-    "unit": "millions",
-    "cost_inr": 250,
-    "desc": "CloudWatch Metrics usage for Ecommerce Market Analysis Tool"
+    "usage_quantity": 2000,
+    "unit": "Metrics",
+    "cost_inr": 400,
+    "desc": "CloudWatch Metrics for Ecommerce Market Analysis Tool"
   }
 ]
