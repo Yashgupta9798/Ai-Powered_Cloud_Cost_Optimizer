@@ -214,16 +214,3 @@ PyYAML
 ChatGPT
 
 
-
-<!-- # How to Demo (≤ 5 Minutes)
-
-- Run python cost_optimizer.py
-
-- Enter a project description
-
-- Run complete cost analysis
-
-- Show generated billing and recommendations
-
-- Open cost_optimization_report.json -->
-
