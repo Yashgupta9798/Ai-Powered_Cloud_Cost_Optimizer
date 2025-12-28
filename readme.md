@@ -96,6 +96,7 @@ All file paths are resolved from the project root to ensure consistent behavior 
 
 ## 📁 Project Structure
 
+```text
 .
 ├── artifacts/
 │   ├── project_description.txt
@@ -138,10 +139,14 @@ All file paths are resolved from the project root to ensure consistent behavior 
 ├── requirements.txt
 ├── .env_example
 └── README.md
+```
 
 
 
-⚙️ Setup Instructions
+
+
+# ⚙️ Setup Instructions
+
 1️⃣ Clone the Repository
 git clone <your-repository-url>
 cd OpenText_project
@@ -161,7 +166,10 @@ Create a .env file using .env_example as reference:
 MISTRAL_API_KEY=your_mistral_api_key_here
 
 
-▶️ How to Run the Project
+
+
+
+# ▶️ How to Run the Project
 Start the CLI
 python cost_optimizer.py
 
@@ -174,10 +182,10 @@ CLI Menu Options
 
 Example Workflow
 
-1️⃣ Enter a project description in plain English
-2️⃣ Run complete cost analysis
-3️⃣ View optimization recommendations
-4️⃣ Export the final report
+- 1️⃣ Enter a project description in plain English
+- 2️⃣ Run complete cost analysis
+- 3️⃣ View optimization recommendations
+- 4️⃣ Export the final report
 
 All generated artifacts are saved in the artifacts/ directory.
 
