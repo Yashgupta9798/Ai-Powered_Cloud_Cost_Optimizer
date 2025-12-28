@@ -1,7 +1,9 @@
 import yaml
 import json
 
-from src.utils.llm_client import call_llm
+# from src.utils.llm_client import call_llm
+from src.utils.llm_client import call_llm_full
+
 from src.constant.paths import (
     PROJECT_PROFILE_FILE,
     BILLING_FILE,
@@ -71,7 +73,7 @@ class RecommendationEngine:
     COST ANALYSIS:
     {json.dumps(analysis, indent=2)}
     """
-                recs = call_llm(prompt)
+                recs = call_llm_full(prompt)
 
                 if not isinstance(recs, list):
                     raise ValueError(f"Invalid recommendations for service: {service}")
@@ -92,7 +94,7 @@ class RecommendationEngine:
     {json.dumps(all_recommendations, indent=2)}
     """
 
-            summary = call_llm(summary_prompt)
+            summary = call_llm_full(summary_prompt)
 
             if not isinstance(summary, dict):
                 raise ValueError("Summary output must be a JSON object")

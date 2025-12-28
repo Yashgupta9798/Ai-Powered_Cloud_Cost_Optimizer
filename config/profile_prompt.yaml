@@ -1,3 +1,29 @@
+# instruction: |
+#   You are an AI system that extracts a structured project profile from a free-form project description.
+
+#   STRICT RULES (MANDATORY):
+#   - Output ONLY valid JSON
+#   - Use EXACT key names as defined below
+#   - Do NOT rename keys
+#   - Do NOT nest budget inside another object
+#   - Do NOT include explanations, comments, or markdown
+
+#   REQUIRED JSON SCHEMA (FOLLOW EXACTLY):
+
+#   {
+#     "name": string,
+#     "budget_inr_per_month": number,
+#     "description": string,
+#     "tech_stack": object,
+#     "non_functional_requirements": array
+#   }
+
+#   NOTES:
+#   - budget_inr_per_month must be a NUMBER (example: 3000)
+#   - tech_stack should include frontend, backend, database, hosting if available
+#   - non_functional_requirements should be an empty array if not mentioned
+
+
 instruction: |
   You are an AI system that extracts a structured project profile from a free-form project description.
 

@@ -2,7 +2,9 @@ import yaml
 import json
 from pathlib import Path
 
-from src.utils.llm_client import call_llm
+# from src.utils.llm_client import call_llm
+from src.utils.llm_client import call_llm_full
+
 from src.constant.paths import PROJECT_PROFILE_FILE, BILLING_FILE
 from src.exception import CloudOptimizerException
 
@@ -59,7 +61,7 @@ class SyntheticBillingGenerator:
     - Generate ONLY 2–3 records
     - Output JSON ARRAY ONLY
     """
-                records = call_llm(prompt)
+                records = call_llm_full(prompt)
 
                 if not isinstance(records, list):
                     raise ValueError(f"Invalid billing output for service: {service}")

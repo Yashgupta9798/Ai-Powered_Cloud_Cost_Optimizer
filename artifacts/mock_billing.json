@@ -1,102 +1,152 @@
 [
   {
-    "month": "2023-10",
+    "month": "January",
     "service": "Compute",
-    "resource_id": "i-1234567890abcdef0",
-    "region": "us-east-1",
-    "usage_quantity": 730,
-    "unit": "hours",
+    "resource_id": "i-0abcd1234efgh5678",
+    "region": "us-west-2",
+    "usage_quantity": 100,
+    "unit": "Hours",
     "cost_inr": 1200,
-    "desc": "t2.micro instance for backend processing"
+    "desc": "On-demand Linux/UNIX EC2 instance usage for Ecommerce Market Analysis Tool"
   },
   {
-    "month": "2023-10",
+    "month": "January",
     "service": "Compute",
-    "resource_id": "i-0987654321fedcba0",
-    "region": "ap-south-1",
-    "usage_quantity": 365,
-    "unit": "hours",
-    "cost_inr": 800,
-    "desc": "t2.micro instance for database replication"
-  },
-  {
-    "month": "2023-10",
-    "service": "Database",
-    "resource_id": "db-12345678",
+    "resource_id": "r5a-0abcd1234efgh5678",
     "region": "us-east-1",
-    "usage_quantity": 744,
-    "unit": "hours",
-    "cost_inr": 1200,
-    "desc": "MongoDB Atlas M10 instance running for the month"
-  },
-  {
-    "month": "2023-10",
-    "service": "Database",
-    "resource_id": "db-87654321",
-    "region": "eu-west-1",
-    "usage_quantity": 372,
-    "unit": "hours",
+    "usage_quantity": 50,
+    "unit": "GB-Month",
     "cost_inr": 600,
-    "desc": "MongoDB Atlas M5 instance for backup operations"
+    "desc": "Amazon Elastic Cache for Redis usage for Ecommerce Market Analysis Tool"
   },
   {
-    "month": "2023-11",
-    "service": "Storage",
-    "resource_id": "s3-bucket-12345",
+    "month": "January",
+    "service": "Compute",
+    "resource_id": "db-0abcd1234efgh5678",
+    "region": "us-west-2",
+    "usage_quantity": 200,
+    "unit": "GB-Month",
+    "cost_inr": 2400,
+    "desc": "Amazon RDS PostgreSQL DB instance usage for Ecommerce Market Analysis Tool"
+  },
+  {
+    "month": "January",
+    "service": "Database",
+    "resource_id": "db-0123456789abc",
+    "region": "us-west-2",
+    "usage_quantity": 1000,
+    "unit": "GB",
+    "cost_inr": 500,
+    "desc": "MongoDB database storage for Ecommerce Market Analysis Tool"
+  },
+  {
+    "month": "January",
+    "service": "Database",
+    "resource_id": "db-9876543210def",
     "region": "us-east-1",
-    "usage_quantity": 150,
+    "usage_quantity": 500,
     "unit": "GB",
     "cost_inr": 250,
-    "desc": "Standard storage for product images and metadata"
+    "desc": "MongoDB database storage for Ecommerce Market Analysis Tool backup"
   },
   {
-    "month": "2023-11",
-    "service": "Storage",
-    "resource_id": "s3-bucket-67890",
+    "month": "January",
+    "service": "Database",
+    "resource_id": "db-ijklmnopqrst",
     "region": "eu-west-1",
-    "usage_quantity": 50,
+    "usage_quantity": 200,
     "unit": "GB",
-    "cost_inr": 120,
-    "desc": "Backup storage for transaction logs"
+    "cost_inr": 100,
+    "desc": "MongoDB database storage for Ecommerce Market Analysis Tool analytics"
   },
   {
-    "month": "2023-11",
-    "service": "Networking",
-    "resource_id": "nat-gateway-12345",
-    "region": "us-east-1",
-    "usage_quantity": 744,
-    "unit": "hours",
-    "cost_inr": 1200,
-    "desc": "NAT Gateway usage for outbound traffic"
+    "month": "January",
+    "service": "Storage",
+    "resource_id": "s3-0123456789abcdef0",
+    "region": "us-west-2",
+    "usage_quantity": 1000,
+    "unit": "GB",
+    "cost_inr": 500,
+    "desc": "S3 storage for Ecommerce Market Analysis Tool"
   },
   {
-    "month": "2023-11",
-    "service": "Networking",
-    "resource_id": "vpc-flow-logs-67890",
+    "month": "January",
+    "service": "Storage",
+    "resource_id": "rds-0123456789abcdef1",
     "region": "us-east-1",
+    "usage_quantity": 50,
+    "unit": "TB",
+    "cost_inr": 250,
+    "desc": "RDS storage for Ecommerce Market Analysis Tool"
+  },
+  {
+    "month": "February",
+    "service": "Storage",
+    "resource_id": "s3-0123456789abcdef2",
+    "region": "us-west-2",
+    "usage_quantity": 1500,
+    "unit": "GB",
+    "cost_inr": 750,
+    "desc": "S3 storage for Ecommerce Market Analysis Tool"
+  },
+  {
+    "month": "January",
+    "service": "Networking",
+    "resource_id": "vpc-0123456789abcdef",
+    "region": "us-west-2",
     "usage_quantity": 100,
     "unit": "GB",
+    "cost_inr": 500,
+    "desc": "Data transfer within VPC"
+  },
+  {
+    "month": "January",
+    "service": "Networking",
+    "resource_id": "elasticache-0123456789abcdef",
+    "region": "us-west-2",
+    "usage_quantity": 200,
+    "unit": "hours",
     "cost_inr": 300,
-    "desc": "VPC Flow Logs storage and analysis"
+    "desc": "Elasticache cluster usage"
   },
   {
-    "month": "2023-11",
-    "service": "Monitoring",
-    "resource_id": "mon-789012",
-    "region": "us-east-1",
-    "usage_quantity": 744,
-    "unit": "hours",
-    "cost_inr": 120.5,
-    "desc": "Basic monitoring for application health checks"
+    "month": "January",
+    "service": "Networking",
+    "resource_id": "directconnect-0123456789abcdef",
+    "region": "us-west-2",
+    "usage_quantity": 50,
+    "unit": "Mbps",
+    "cost_inr": 200,
+    "desc": "Direct Connect bandwidth usage"
   },
   {
-    "month": "2023-11",
+    "month": "January",
     "service": "Monitoring",
-    "resource_id": "mon-345678",
-    "region": "eu-west-1",
-    "usage_quantity": 320,
-    "unit": "hours",
-    "cost_inr": 85.2,
-    "desc": "Advanced monitoring with custom metrics"
+    "resource_id": "CloudWatch-Logs-Ecommerce-Market-Analysis-Tool",
+    "region": "us-west-2",
+    "usage_quantity": 1000,
+    "unit": "GB",
+    "cost_inr": 500,
+    "desc": "CloudWatch Logs usage for Ecommerce Market Analysis Tool"
+  },
+  {
+    "month": "January",
+    "service": "Monitoring",
+    "resource_id": "CloudWatch-Alarms-Ecommerce-Market-Analysis-Tool",
+    "region": "us-west-2",
+    "usage_quantity": 200,
+    "unit": "alarms",
+    "cost_inr": 100,
+    "desc": "CloudWatch Alarms usage for Ecommerce Market Analysis Tool"
+  },
+  {
+    "month": "January",
+    "service": "Monitoring",
+    "resource_id": "CloudWatch-Metrics-Ecommerce-Market-Analysis-Tool",
+    "region": "us-west-2",
+    "usage_quantity": 500,
+    "unit": "millions",
+    "cost_inr": 250,
+    "desc": "CloudWatch Metrics usage for Ecommerce Market Analysis Tool"
   }
 ]

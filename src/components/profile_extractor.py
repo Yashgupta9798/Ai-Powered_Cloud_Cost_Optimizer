@@ -2,7 +2,9 @@ import yaml
 import json
 from pathlib import Path
 
-from src.utils.llm_client import call_llm
+# from src.utils.llm_client import call_llm
+from src.utils.llm_client import call_llm_stream
+
 from src.constant.paths import PROJECT_DESC_FILE, PROJECT_PROFILE_FILE
 from src.exception import CloudOptimizerException
 
@@ -42,7 +44,7 @@ PROJECT DESCRIPTION:
 {description}
 """
 
-            profile_json = call_llm(final_prompt)
+            profile_json = call_llm_stream(final_prompt)
 
             # Save output
             with open(PROJECT_PROFILE_FILE, "w", encoding="utf-8") as f:
