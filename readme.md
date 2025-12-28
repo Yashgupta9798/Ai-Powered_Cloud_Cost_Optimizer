@@ -203,7 +203,7 @@ All LLM outputs are validated
 
 # Tools Used
 
-Mistral API – LLM inference
+Mistral API – LLM inference - Not used Hugging face as mistral was not working but when i used mistral api from it's officaial website it was working fine
 
 Python 3.10
 
@@ -211,9 +211,11 @@ dotenv
 
 PyYAML
 
+ChatGPT
 
 
-# How to Demo (≤ 5 Minutes)
+
+<!-- # How to Demo (≤ 5 Minutes)
 
 - Run python cost_optimizer.py
 
@@ -223,5 +225,5 @@ PyYAML
 
 - Show generated billing and recommendations
 
-- Open cost_optimization_report.json
+- Open cost_optimization_report.json -->
 
